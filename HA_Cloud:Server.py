@@ -47,7 +47,7 @@ class Server_HTTP_Handler(BaseHTTPRequestHandler):
 
 			#
 			if sendReply == True and mimetype != 'image/jpg':
-				# Apre il file richiesto per la lettura dal diso locale in modalità lettura
+				# Apre il file richiesto per la lettura dal disco locale in modalità lettura
 				f = open(curdir + sep + self.path, mode="r", encoding="utf8")
 				# 
 				self.send_response(200)
@@ -58,7 +58,7 @@ class Server_HTTP_Handler(BaseHTTPRequestHandler):
 				f.close()
 				#raise Exception('spam', 'eggs')
 			else:
-				# Apre il file richiesto per la lettura dal diso locale in modalità lettura
+				# Apre il file richiesto per la lettura dal disco locale in modalità lettura
 				# I file immagine devono essere letti in modalità binaria
 				f = open(curdir + sep + self.path, mode="rb") 
 				self.send_response(200)
